@@ -1,22 +1,23 @@
 import { GlobalStyle } from 'GlobalStyle';
-import { Component } from 'react';
+import common from 'components/common';
 
-export class App extends Component {
-  state = {};
+const Container = common.Container;
+function App() {
   // componentDidMount() {}
   // componentDidUpdate() {}
 
   //Вызывается при отправке формы - возвращает буль от которого зависит сброс формы
   //Буль необходим для реализации проверки дублирующихся записей
-  handleSubmit = e => {
-    e.preventDefault();
-  };
+  // const handleSubmit = e => {
+  //   e.preventDefault();
+  // };
   // *************************************************************************
-  render() {
-    //Деструктуризация объекта из state
+  return (
     <>
+      <Container>Ghbdtn z rjyntbyth</Container>
       {/*Подключение глобального стиля */}
       <GlobalStyle />
-    </>;
-  }
+    </>
+  );
 }
+export default App;

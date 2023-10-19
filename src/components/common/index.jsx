@@ -1,4 +1,10 @@
-export { Box } from './Box';
-export { Container } from './Container';
-export { Section } from './Section';
-export { Button } from './Button';
+import Box from './Box';
+import Container from './Container';
+import Section from './Section';
+import Button from './Button';
+const common = { Box, Container, Section, Button };
+// export { Box } from './Box';
+// export { Container } from './Container';
+// export { Section } from './Section';
+// export { Button } from './Button';
+export default common;
