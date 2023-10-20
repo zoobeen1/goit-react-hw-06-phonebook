@@ -11,7 +11,7 @@ import {
   typography,
 } from 'styled-system';
 
-const Box = styled('div')(
+export const Box = styled('div')(
   color,
   space,
   layout,
@@ -22,4 +22,3 @@ const Box = styled('div')(
   shadow,
   typography
 );
-export default Box;
