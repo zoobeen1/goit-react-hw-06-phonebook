@@ -1,5 +1,6 @@
-import Box from './Box';
-const Button = ({ children, ...props }) => {
+import { Box } from '.';
+import PropTypes from 'prop-types';
+export const Button = ({ children, ...props }) => {
   return (
     <Box
       as="button"
@@ -16,5 +17,6 @@ const Button = ({ children, ...props }) => {
     </Box>
   );
 };
-
-export default Button;
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+};

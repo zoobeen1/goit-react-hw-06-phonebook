@@ -1,32 +1,39 @@
-// import { GlobalStyle } from 'GlobalStyle';
-// import common from 'components/common';
+import { GlobalStyle } from 'GlobalStyle';
+import { InputForm } from 'components/InputForm';
+import { Container } from 'components/common';
+import { Contacts } from 'components/Contacts';
+import { Filter } from 'components/Filter';
 
-import { Layout } from 'components/Layout/Layout';
-import { AppBar } from 'components/AppBar/AppBar';
-import { TaskForm } from 'components/TaskForm/TaskForm';
-import { TaskList } from 'components/TaskList/TaskList';
+export function App() {
+  //Удаляет контакт по его id
+  const deleteContact = id => {
+    // setContacts(contacts.filter(contact => contact.id !== id));
+  };
 
-// const Container = common.Container;
-function App() {
-  //Вызывается при отправке формы - возвращает буль от которого зависит сброс формы
-  //Буль необходим для реализации проверки дублирующихся записей
-  // const handleSubmit = e => {
-  //   e.preventDefault();
+  // //Управляет фильтром - контроллируемый элемент
+  // const changeFilter = e => {
+  //   setFilter(e.target.value);
   // };
+
+  // //Возвращает массив контактов по фильтру
+  const getVisibleContacts = () => {
+    // const lowercaseFilter = filter.toLowerCase();
+    // return contacts.filter(contact =>
+    //   contact.name.toLowerCase().includes(lowercaseFilter)
+    // );
+  };
+
   // *************************************************************************
+
   return (
-    <Layout>
-      <AppBar />
-      <TaskForm />
-      <TaskList />
-    </Layout>
+    <Container>
+      <h2>Phonebook</h2>
+      <InputForm />
+
+      <h2>Contacts</h2>
+      {/* <Filter filter={filter} onChange={changeFilter} /> */}
+      {/* <Contacts contacts={getVisibleContacts()} deleteContact={deleteContact} /> */}
+      <GlobalStyle />
+    </Container>
   );
-  // return (
-  //   <>
-  //     <Container>Ghbdtn z rjyntbyth</Container>
-  //     {/*Подключение глобального стиля */}
-  //     <GlobalStyle />
-  //   </>
-  // );
 }
-export default App;

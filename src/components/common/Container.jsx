@@ -1,5 +1,5 @@
-import Box from './Box';
-const Container = ({ children }) => {
+import { Box } from './Box';
+export const Container = ({ children }) => {
   return (
     <Box
       width="small"
@@ -15,4 +15,3 @@ const Container = ({ children }) => {
     </Box>
   );
 };
-export default Container;
