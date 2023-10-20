@@ -6,19 +6,18 @@ import { FormError } from './FormError';
 import * as yup from 'yup';
 // Импортируем хук
 import { useDispatch } from 'react-redux';
-// Импортируем генератор экшена
-import { addContact } from '../../redux/actions';
+// Импортируем action generator
+import { addContact } from 'redux/contactsSlice';
 
 export const InputForm = () => {
+  // Получаем ссылку на функцию отправки экшенов
+  const dispatch = useDispatch();
   const INITIAL_VALUES = { name: '', phone: '' };
   //Formik Validation schema
   const schema = yup.object().shape({
     name: yup.string().min(5).max(40).required('Name is required'),
     phone: yup.string().min(5).max(13).required('Phone is required'),
   });
-
-  // Получаем ссылку на функцию отправки экшенов
-  const dispatch = useDispatch();
 
   //Submit function
   function handleSubmit(task) {
