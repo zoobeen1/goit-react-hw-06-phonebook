@@ -20,9 +20,9 @@ export const InputForm = () => {
   });
 
   //Submit function
-  function handleSubmit(task) {
+  function handleSubmit(task, { resetForm }) {
     dispatch(addContact(task));
-    // form.reset();
+    resetForm();
   }
 
   return (
