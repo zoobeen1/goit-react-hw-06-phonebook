@@ -6,6 +6,7 @@ export const Filter = ({ filter, onChange }) => {
       <Box
         as="input"
         mt={2}
+        mb={4}
         p={2}
         border="normal"
         borderRadius="normal"

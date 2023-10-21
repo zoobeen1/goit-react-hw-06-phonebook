@@ -14,6 +14,9 @@ const contactsSlice = createSlice({
         return { payload: { id: nanoid(), name, phone } };
       },
     },
+    deleteContact(state, { payload }) {
+      state.filter(res => res.id !== payload);
+    },
   },
 });
 export const { addContact } = contactsSlice.actions;

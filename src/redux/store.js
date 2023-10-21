@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { contactsReducer } from './contactsSlice';
 
 const store = configureStore({
-  reducer: { tasks: contactsReducer },
+  reducer: { contacts: contactsReducer },
 });
 
 export default store;
